@@ -8,6 +8,8 @@
 
 **Tor is not a browser!**
 
+The link to the repository was changed 07.01.2026. [See why](https://github.com/Chara-Freedom/Tor-Portable/issues/8#issuecomment-3717797267).
+
 ---
 # Tor Portable
 
