@@ -12,6 +12,8 @@
 
 **Тор это не браузер!**
 
+Ссылка на репозиторий была изменена 07.01.2026. [Вот почему](https://github.com/Chara-Freedom/Tor-Portable/issues/8#issuecomment-3717797267).
+
 ---
 # Tor Portable
 
