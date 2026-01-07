@@ -29,11 +29,11 @@
 
 **Пожалуйста, оставьте звезду:**
 
-<a href="https://star-history.com/#Verity-Freedom/Tor-Portable&Date">
+<a href="https://www.star-history.com/#Chara-Freedom/Tor-Portable&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Verity-Freedom/Tor-Portable&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Verity-Freedom/Tor-Portable&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Verity-Freedom/Tor-Portable&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Chara-Freedom/Tor-Portable&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Chara-Freedom/Tor-Portable&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Chara-Freedom/Tor-Portable&type=date&legend=top-left" />
  </picture>
 </a>
 
