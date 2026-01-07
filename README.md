@@ -19,11 +19,11 @@ Support me: 0xb9569717b5f1ee67a2ace2b999a61e3d8d4cce52 USDT BEP20, https://www.d
 
 **Please leave a star:**
 
-<a href="https://star-history.com/#Verity-Freedom/Tor-Portable&Date">
+<a href="https://star-history.com/#Chara-Freedom/Tor-Portable&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Verity-Freedom/Tor-Portable&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Verity-Freedom/Tor-Portable&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Verity-Freedom/Tor-Portable&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=#Chara-Freedom/Tor-Portable&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=#Chara-Freedom/Tor-Portable&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=#Chara-Freedom/Tor-Portable&type=Date" />
  </picture>
 </a>
 
