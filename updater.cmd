@@ -6,7 +6,7 @@ pause
 exit
 )
 set countfile=0 & for %%f in (*) do set /a countfile+=1
-set countfolder=0 & for /D %%a in (%CD%\*) do set /a countfolder+=1
+set countfolder=0 & for /D %%a in ("%CD%\*") do set /a countfolder+=1
 if %countfile% lss 10 if %countfolder% lss 8 goto Skip
 choice /m "There are too many files to update. You don't want to run the updater in a folder with your personal files. Continue update anyway"
 if %errorlevel% EQU 2 exit
