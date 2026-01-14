@@ -69,7 +69,7 @@ If Discord does not work in your country, install Discord-* mod. After installin
 
 Then install the ZeroOmega extension ([Chrome](https://chromewebstore.google.com/detail/proxy-switchyomega-3-zero/pfnededegaaopdmhkdmcofjmoldfiped), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/zeroomega/), [GitHub](https://github.com/zero-peak/ZeroOmega)). Pin it to your extensions bar. Before using ZeroOmega on Firefox, you need to grant it the "Run in private windows" permission. ZeroOmega is the best platform for mass deployment of browser proxy settings, so you can 5 star it in your store. It is possible to install an extension from a local file (ExtensionsLocal.zip). This is especially important if there are issues with the extension's availability in your store.
 
-If you use Chrome or similar (Edge, Opera) browser, please also install [WebRTC Control](https://chromewebstore.google.com/detail/webrtc-control/fjkmabmdepjfammlpliljpnbhleegehm). It will significantly protect your privacy [until identical functionality is added to ZeroOmega](https://github.com/zero-peak/ZeroOmega/issues/182).
+If you use Chrome-like browser (except Brave), please also install [WebRTC Control](https://chromewebstore.google.com/detail/webrtc-control/fjkmabmdepjfammlpliljpnbhleegehm). It will protect your IP against leakage [until identical functionality is added to ZeroOmega](https://github.com/zero-peak/ZeroOmega/issues/182).
 
 It's time to sync your settings. Choose between three configs:
 
