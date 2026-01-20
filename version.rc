@@ -1,0 +1,20 @@
+1 VERSIONINFO
+FILEVERSION 2,4,7,0
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName", "The Tor Project; Verity Freedom"
+      VALUE "FileDescription", "For our and your freedom"
+      VALUE "LegalCopyright", "BSD-3 license"
+      VALUE "OriginalFilename", "AntiTor.exe"
+      VALUE "ProductName", "Tor Portable"
+      VALUE "ProductVersion", "GRU current; build 2.4.7"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x409, 1252
+  END
+END
