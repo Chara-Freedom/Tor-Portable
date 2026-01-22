@@ -1,3 +1,3 @@
 windres icon.rc -O coff -o icon.res
 windres version.rc -O coff -o version.res
-g++ -o AntiTor AntiTor.cpp version.res icon.res
+g++ -o AntiTor AntiTor.cpp -lurlmon version.res icon.res

@@ -12,7 +12,10 @@ char buffer[100];
 string UPD;
 while (fgets(buffer, sizeof(buffer), pipe) != NULL) UPD += buffer;
 _pclose(pipe);
-string link = "https://ipfs.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/" + UPD;
+string TESTYO = "ZeroOmegaOptions-RU.bak";
+string link = "https://ipfs.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/" + TESTYO;
+string filename = "./tor/" + TESTYO;
+URLDownloadToFile(NULL, link.c_str(), filename.c_str(), 0, NULL);
 _wchdir(L"./tor");
 system("start /min tor.exe -f ../torrc.txt");
 }
