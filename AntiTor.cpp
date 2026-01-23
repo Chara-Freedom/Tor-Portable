@@ -14,7 +14,7 @@ string UPD;
 FILE* pipe = _popen("@echo off & for %I in (VERSION*) do echo %~nxI", "r");
 while (fgets(buffer, sizeof(buffer), pipe) != NULL) {
 buffer[strcspn(buffer, "\n")] = 0;
-UPD += buffer;
+UPD = buffer;
 }
 _pclose(pipe);
 string link = "https://ipfs.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/" + UPD;
@@ -30,7 +30,7 @@ string TEMP;
 FILE* pipe = _popen("echo %TEMP%", "r");
 while (fgets(buffer, sizeof(buffer), pipe) != NULL) {
 buffer[strcspn(buffer, "\n")] = 0;
-TEMP += buffer;
+TEMP = buffer;
 }
 _pclose(pipe);
 string TEMPUPDATE = TEMP + "\\" + "autoupdate.cmd";
