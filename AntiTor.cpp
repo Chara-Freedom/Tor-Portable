@@ -12,12 +12,12 @@ filesystem::path pathname = fullpath;
 filesystem::current_path(fullpath.remove_filename());
 char buffer[256];
 string UPD;
-FILE* pipe = _popen("@echo off & for %I in (VERSION*) do echo %~nxI", "r");
-while (fgets(buffer, sizeof(buffer), pipe) != NULL) {
+FILE* pipe1 = _popen("@echo off & for %I in (VERSION*) do echo %~nxI", "r");
+while (fgets(buffer, sizeof(buffer), pipe1) != NULL) {
 buffer[strcspn(buffer, "\n")] = 0;
 UPD = buffer;
 }
-_pclose(pipe);
+_pclose(pipe1);
 string link = "https://ipfs.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/" + UPD;
 string filename = "./tor/" + UPD;
 IStream* pStream = NULL;
@@ -28,12 +28,12 @@ cout << "The local version does not match the latest version. It means that upda
 choice = _getch();
 if (choice == '0') goto Skip;
 string TEMP;
-FILE* pipe = _popen("echo %TEMP%", "r");
-while (fgets(buffer, sizeof(buffer), pipe) != NULL) {
+FILE* pipe2 = _popen("echo %TEMP%", "r");
+while (fgets(buffer, sizeof(buffer), pipe2) != NULL) {
 buffer[strcspn(buffer, "\n")] = 0;
 TEMP = buffer;
 }
-_pclose(pipe);
+_pclose(pipe2);
 string TEMPUPDATE = TEMP + "\\" + "autoupdate.cmd";
 ofstream outfile(TEMPUPDATE);
 outfile << "@echo off" << endl;
@@ -50,6 +50,13 @@ return TRUE;
 }
 pStream->Release();
 Skip:
+string PROC;
+FILE* pipe3 = _popen("echo %PROCESSOR_ARCHITECTURE%", "r");
+while (fgets(buffer, sizeof(buffer), pipe3) != NULL) {
+buffer[strcspn(buffer, "\n")] = 0;
+PROC = buffer;
+}
+_pclose(pipe3);
 _wchdir(L"./tor");
 system("start /min tor -f ../torrc.txt");
 }
