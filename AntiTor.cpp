@@ -2,6 +2,7 @@
 #include <fstream>
 #include <windows.h>
 #include <filesystem>
+#include <conio.h>
 using namespace std;
 int main() {
 WCHAR path[MAX_PATH];
@@ -21,11 +22,14 @@ string filename = "./tor/" + UPD;
 IStream* pStream = NULL;
 if (FAILED(URLOpenBlockingStream(0, link.c_str(), &pStream, 0, 0)))
 {
-std::cout << "upd" << endl;
-system("pause");
+char choice;
+cout << "The local version does not match the latest version. It means that update is available, but in edge cases marks accessibility issues. Press any key if you want to update or 0 to skip";
+choice = _getch();
+if (choice == '0') goto Skip;
 return TRUE;
 }
 pStream->Release();
+Skip:
 _wchdir(L"./tor");
 system("start /min tor -f ../torrc.txt");
 }
