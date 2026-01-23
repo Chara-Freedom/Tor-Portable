@@ -57,17 +57,16 @@ buffer[strcspn(buffer, "\n")] = 0;
 PROC = buffer;
 }
 _pclose(pipe3);
-string SERVICE;
-string quoted = "\"sc query \"Tor Win32 Service\" | findstr /c:\"Tor\"\"";
-FILE* pipe4 = _popen(quoted.c_str(), "r");
-while (fgets(buffer, sizeof(buffer), pipe4) != NULL) {
-buffer[strcspn(buffer, "\n")] = 0;
-SERVICE = buffer;
-}
-_pclose(pipe4);
-if (SERVICE.find('T') != string::npos) {
+string quoted = "\"sc query \"Tor Win32 Service\" >nul\"";
+int service = system(quoted.c_str());
+if (service == 0) {
 system("call service-manager.cmd");
 system("timeout /t 3 /nobreak");
+}
+int admin = system("net session >nul 2>&1");
+if (PROC.find('8') != string::npos) {
+ShellExecuteW(NULL, (L"runas"), (pathname.c_str()), NULL, NULL, SW_SHOWNORMAL);
+return 0;
 }
 _wchdir(L"./tor");
 system("start /min tor -f ../torrc.txt");
