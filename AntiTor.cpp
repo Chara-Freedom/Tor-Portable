@@ -8,6 +8,7 @@ int main() {
 WCHAR path[MAX_PATH];
 GetModuleFileNameW(NULL, path, MAX_PATH);
 filesystem::path fullpath(path);
+filesystem::path pathname = fullpath;
 filesystem::current_path(fullpath.remove_filename());
 char buffer[256];
 string UPD;
@@ -35,7 +36,16 @@ TEMP = buffer;
 _pclose(pipe);
 string TEMPUPDATE = TEMP + "\\" + "autoupdate.cmd";
 ofstream outfile(TEMPUPDATE);
-outfile << "heyaaa";
+outfile << "@echo off" << endl;
+outfile << "call " << fullpath << "updater.cmd" << endl;
+outfile << "cls" << endl;
+outfile << ":Wait" << endl;
+outfile << "if not exist " << fullpath << "torrc.txt" << " GOTO Wait" << endl;
+outfile << "timeout /t 1 /nobreak" << endl;
+outfile << "call " << pathname << endl;
+outfile << "del " << TEMPUPDATE;
+string finale = "start "" cmd /c " + TEMPUPDATE;
+system(finale.c_str());
 return TRUE;
 }
 pStream->Release();
