@@ -18,7 +18,10 @@ buffer[strcspn(buffer, "\n")] = 0;
 UPD = buffer;
 }
 _pclose(pipe1);
-string link = "https://ipfs.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/" + UPD;
+string link;
+if (UPD.find('V') != string::npos) {
+link = "https://ipfs.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/" + UPD;
+}
 IStream* pStream = NULL;
 if (FAILED(URLOpenBlockingStream(0, link.c_str(), &pStream, 0, 0)))
 {
