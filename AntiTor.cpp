@@ -65,8 +65,10 @@ system("timeout /t 3 /nobreak");
 }
 int admin = system("net session >nul 2>&1");
 if (PROC.find('8') != string::npos) {
+if (admin != 0) {
 ShellExecuteW(NULL, (L"runas"), (pathname.c_str()), NULL, NULL, SW_SHOWNORMAL);
 return 0;
+}
 }
 _wchdir(L"./tor");
 system("start /min tor -f ../torrc.txt");
