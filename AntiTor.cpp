@@ -69,7 +69,7 @@ if (system("net session >nul 2>&1") != 0) {
 ShellExecuteW(NULL, (L"runas"), (pathname.c_str()), NULL, NULL, SW_SHOWNORMAL);
 return 0;
 }
-if (PROC.find('4') != string::npos && !filesystem::exists("C:\\Windows\\Sysnative\\acryptprimitives.dll"))  {
+if (PROC.find('4') != string::npos && !filesystem::exists("C:\\Windows\\Sysnative\\acryptprimitives.dll")) {
 system("copy \"%CD%\\oldwin\\acryptprimitives.dll\" \"C:\\Windows\\Sysnative\\acryptprimitives.dll\"");
 }
 if (PROC.find('8') != string::npos && !filesystem::exists("C:\\Windows\\System32\\acryptprimitives.dll")) {
