@@ -59,15 +59,12 @@ buffer[strcspn(buffer, "\n")] = 0;
 PROC = buffer;
 }
 _pclose(pipe3);
-string quoted = "sc query \"Tor Win32 Service\" >nul";
-int service = system(quoted.c_str());
-if (service == 0) {
+if (system("sc query \"Tor Win32 Service\" >nul") == 0) {
 system("call service-manager.cmd");
 system("timeout /t 3 /nobreak");
 }
-int admin = system("net session >nul 2>&1");
 if (PROC.find('8') != string::npos) {
-if (admin != 0) {
+if (system("net session >nul 2>&1") != 0) {
 ShellExecuteW(NULL, (L"runas"), (pathname.c_str()), NULL, NULL, SW_SHOWNORMAL);
 return 0;
 }
