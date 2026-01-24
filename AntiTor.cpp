@@ -57,7 +57,7 @@ buffer[strcspn(buffer, "\n")] = 0;
 PROC = buffer;
 }
 _pclose(pipe3);
-string quoted = "\"sc query \"Tor Win32 Service\" >nul\"";
+string quoted = "sc query \"Tor Win32 Service\" >nul";
 int service = system(quoted.c_str());
 if (service == 0) {
 system("call service-manager.cmd");
