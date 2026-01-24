@@ -64,7 +64,7 @@ if (system("sc query \"Tor Win32 Service\" >nul") == 0) {
 system("call service-manager.cmd");
 system("timeout /t 3 /nobreak");
 }
-if (PROC.find('8') != string::npos || !(IsWindows8OrGreater()) && !filesystem::exists("C:\\Windows\\System32\\acryptprimitives.dll")) {
+if (PROC.find('8') != string::npos || !(IsWindows8OrGreater()) && !filesystem::exists("C:\\Windows\\Sysnative\\acryptprimitives.dll")) {
 if (system("net session >nul 2>&1") != 0) {
 ShellExecuteW(NULL, (L"runas"), (pathname.c_str()), NULL, NULL, SW_SHOWNORMAL);
 return 0;
