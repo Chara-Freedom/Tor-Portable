@@ -12,7 +12,7 @@ choice /m "There are too many files to update. You don't want to run the updater
 if %errorlevel% EQU 2 exit
 :Skip
 if "%CD:~-1%" == "\" (set "WAY=%CD:~0,-1%") else set "WAY=%CD%"
-taskkill /im tor.exe >nul 2>&1
+FOR /F "tokens=2*" %%B IN ('tasklist ^| findstr tor.exe') DO taskkill /PID %%B >nul 2>&1
 sc query "Tor Win32 Service" >nul
 if %errorlevel% EQU 0 (
 call service-manager.cmd
