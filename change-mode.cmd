@@ -1,6 +1,6 @@
 @echo off & cd /d "%~dp0"
 setlocal EnableDelayedExpansion
-taskkill /im tor.exe >nul 2>&1
+FOR /F "tokens=2*" %%B IN ('tasklist ^| findstr tor.exe') DO taskkill /PID %%B >nul 2>&1
 sc query "Tor Win32 Service" >nul
 if %errorlevel% EQU 0 (
 call service-manager.cmd
