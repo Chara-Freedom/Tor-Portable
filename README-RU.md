@@ -36,7 +36,7 @@
 </a>
 
 Разработано при поддержке сообщества (в особенности отмечу помощь от [bananakid](https://github.com/anticensority/runet-censorship-bypass/issues/224#issuecomment-2025676123) и [DesuIsALie](https://github.com/Chara-Freedom/Tor-Portable/issues/2#issuecomment-2362230547)).  
-Основной автор портативного Тора — Verity Freedom. Концепт, патч Win 7, конфиги, службы, портативное развёртывание на Linux, [система обновлений](https://github.com/Chara-Freedom/GRU-current), гайд, exe код от Verity Freedom.  
+Концепт, патч Win 7, конфиги, службы, портативное развёртывание на Linux, [система обновлений](https://github.com/Chara-Freedom/GRU-current), гайд, exe код от Verity Freedom.  
 [Патчер Win 7](https://github.com/stunndard/golangwin7patch) от stunnard.  
 [Лист хостов](https://github.com/dartraiden/no-russia-hosts) от dartraiden.  
 Автор [прокси Антизапрет](http://antizapret.prostovpn.org/) — ValdikSS.  
