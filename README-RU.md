@@ -36,7 +36,7 @@
 </a>
 
 Разработано при поддержке сообщества (в особенности отмечу помощь от [bananakid](https://github.com/anticensority/runet-censorship-bypass/issues/224#issuecomment-2025676123) и [DesuIsALie](https://github.com/Chara-Freedom/Tor-Portable/issues/2#issuecomment-2362230547)).  
-Основной автор портативного Тора — Verity Freedom. Концепт, патч Win 7, конфиги, службы, портативное развёртывание на Linux, [система обновлений](https://github.com/Chara-Freedom/GRU-current), гайд от Verity Freedom.  
+Основной автор портативного Тора — Verity Freedom. Концепт, патч Win 7, конфиги, службы, портативное развёртывание на Linux, [система обновлений](https://github.com/Chara-Freedom/GRU-current), гайд, exe код от Verity Freedom.  
 [Патчер Win 7](https://github.com/stunndard/golangwin7patch) от stunnard.  
 [Лист хостов](https://github.com/dartraiden/no-russia-hosts) от dartraiden.  
 Автор [прокси Антизапрет](http://antizapret.prostovpn.org/) — ValdikSS.  
@@ -46,7 +46,7 @@
 [Техническая помощь](https://github.com/Chara-Freedom/Tor-Portable/commits?author=NoPlagiarism) от NoPlagiarism, также помог проименовать Тор мосты (приватный замороженный проект) и тестировать Webtunnel.  
 Тесты Win 7 и битности ([1](https://github.com/Chara-Freedom/Tor-Portable/issues/8#issuecomment-2906773975), [2](https://github.com/Chara-Freedom/Tor-Portable/issues/21#issuecomment-2907699471)) от qwers99.  
 Тесты и техническая помощь в [портативном](https://github.com/NixOS/nixpkgs/issues/425977) [развёртывании](https://github.com/NixOS/nixpkgs/issues/427078) на Linux от imsweetdogs и 7c6f434c соответственно.  
-Система элевации от [Matt](https://stackoverflow.com/a/12264592), [Verity Freedom](https://stackoverflow.com/a/79585058) и [Mofi](https://stackoverflow.com/questions/7044985/how-can-i-auto-elevate-my-batch-file-so-that-it-requests-from-uac-administrator/12264592#comment140920768_12264592) (профессиональное рецензирование и редактура), [чекер версии Windows](https://stackoverflow.com/a/75970274) от captain_majid.
+Система элевации от [Matt](https://stackoverflow.com/a/12264592), [Verity Freedom](https://stackoverflow.com/a/79585058) и [Mofi](https://stackoverflow.com/questions/7044985/how-can-i-auto-elevate-my-batch-file-so-that-it-requests-from-uac-administrator/12264592#comment140920768_12264592) (профессиональное рецензирование и редактура).
 
 ## Инструкция
 
