@@ -26,7 +26,7 @@ Support me: 0xb9569717b5f1ee67a2ace2b999a61e3d8d4cce52 USDT BEP20, https://www.d
 </a>
 
 Developed with community support (especially thanks to [bananakid](https://github.com/anticensority/runet-censorship-bypass/issues/224#issuecomment-2025676123) and [DesuIsALie](https://github.com/Chara-Freedom/Tor-Portable/issues/2#issuecomment-2362230547)).  
-Concept, configurations, Win 7 patch, Linux portable deployment, [update system](https://github.com/Chara-Freedom/GRU-current), services, guide, exe code by Verity Freedom.  
+Concept, configurations, Win 7 patch, Linux portable deployment, [update system](https://github.com/Chara-Freedom/GRU-current), services, guide, exe code by Chara Freedom.  
 [Win 7 patcher](https://github.com/stunndard/golangwin7patch) by stunnard.  
 [Hosts list](https://github.com/dartraiden/no-russia-hosts) by dartraiden.  
 The author of the [Antizapret proxy](http://antizapret.prostovpn.org/) is ValdikSS.  
@@ -36,7 +36,7 @@ The author of the [Antizapret proxy](http://antizapret.prostovpn.org/) is Valdik
 [Technical help](https://github.com/Chara-Freedom/Tor-Portable/commits?author=NoPlagiarism) by NoPlagiarism, also helped naming Tor bridges (private frozen project) and testing Webtunnel.  
 Win 7 and bitness tests ([1](https://github.com/Chara-Freedom/Tor-Portable/issues/8#issuecomment-2906773975), [2](https://github.com/Chara-Freedom/Tor-Portable/issues/21#issuecomment-2907699471)) by qwers99.  
 Tests and technical help in Linux [portable](https://github.com/NixOS/nixpkgs/issues/425977) [deployment](https://github.com/NixOS/nixpkgs/issues/427078) by imsweetdogs and 7c6f434c respectively.  
-Elevation system by [Matt](https://stackoverflow.com/a/12264592), [Verity Freedom](https://stackoverflow.com/a/79585058) and [Mofi](https://stackoverflow.com/questions/7044985/how-can-i-auto-elevate-my-batch-file-so-that-it-requests-from-uac-administrator/12264592#comment140920768_12264592) (professional review and editing).
+Elevation system by [Matt](https://stackoverflow.com/a/12264592), [Chara Freedom](https://stackoverflow.com/a/79585058) and [Mofi](https://stackoverflow.com/questions/7044985/how-can-i-auto-elevate-my-batch-file-so-that-it-requests-from-uac-administrator/12264592#comment140920768_12264592) (professional review and editing).
 
 ## Philosophy
 
