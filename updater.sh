@@ -11,7 +11,7 @@ read -n 1 -p "There are too many files to update. You don't want to run the upda
  exit
  fi
 fi
-lsof -t ./tor/ld-linux-x86-64.so.2 | xargs kill
+lsof -t ./tor/ld-linux-x86-64.so.2 | xargs -r kill
 systemctl --user disable tor.service --now
 rm ~/.config/systemd/user/tor.service
 cp ./torrc.txt ./data/torrc.txt
