@@ -6,18 +6,26 @@ if %errorlevel% EQU 0 (
 call service-manager.cmd
 timeout /t 3 /nobreak
 )
-choice /c 123 /n /m "Welcome to the mode control panel. Do you want to set the mode to pro (1), set the mode to default (2), or remove middle nodes (3)?"
+Echo Welcome to the mode control panel.
+Echo.
+Echo Do you want to set the mode to random-exit (0, default), set the mode to exit-1 (1), set the mode to exit-2 (2), or remove middle nodes (3, applies to any other mode)?
+choice /c 0123 /n
 if %errorlevel% EQU 1 (
-copy "%CD%\change-mode\pro\torrc.txt" "%CD%\torrc.txt"
-echo The mode was changed to pro.
+copy "%CD%\change-mode\random-exit\torrc.txt" "%CD%\torrc.txt"
+echo The mode was changed to random-exit.
 pause
 )
 if %errorlevel% EQU 2 (
-copy "%CD%\change-mode\default\torrc.txt" "%CD%\torrc.txt"
-echo The mode was changed to default.
+copy "%CD%\change-mode\exit-1\torrc.txt" "%CD%\torrc.txt"
+echo The mode was changed to exit-1.
 pause
 )
 if %errorlevel% EQU 3 (
+copy "%CD%\change-mode\exit-2\torrc.txt" "%CD%\torrc.txt"
+echo The mode was changed to exit-2.
+pause
+)
+if %errorlevel% EQU 4 (
 findstr /c:"#MiddleNodes" torrc.txt
 if !errorlevel! EQU 0 (
 echo Middle nodes are already not in use.
