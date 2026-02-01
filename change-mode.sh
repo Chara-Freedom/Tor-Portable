@@ -3,16 +3,24 @@ cd "$(dirname "$0")"
 lsof -t ./tor/ld-linux-x86-64.so.2 | xargs kill
 systemctl --user disable tor.service --now
 rm ~/.config/systemd/user/tor.service
-read -n 1 -p "Welcome to the mode control panel. Do you want to set the mode to pro (1), set the mode to default (2), or remove middle nodes (3)?" INP
+echo "Welcome to the mode control panel."
+echo
+echo "Do you want to set the mode to random-exit (0, default), set the mode to exit-1 (1), set the mode to exit-2 (2), or remove middle nodes (3, applies to any other mode)?"
+read -n 1 -p "" INP
+if [[ $INP = 0 ]]; then
+echo
+cp ./change-mode/random-exit/torrc.txt torrc.txt
+read -p "The mode was changed to random-exit."
+fi
 if [[ $INP = 1 ]]; then
 echo
-cp ./change-mode/pro/torrc.txt torrc.txt
-read -p "The mode was changed to pro."
+cp ./change-mode/exit-1/torrc.txt torrc.txt
+read -p "The mode was changed to exit-1."
 fi
 if [[ $INP = 2 ]]; then
 echo
-cp ./change-mode/default/torrc.txt torrc.txt
-read -p "The mode was changed to default."
+cp ./change-mode/exit-2/torrc.txt torrc.txt
+read -p "The mode was changed to exit-2."
 fi
 if [[ $INP = 3 ]]; then
 echo
