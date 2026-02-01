@@ -22,7 +22,7 @@ systemctl --user status tor.service
 read -p "Tor service was deleted"
 exit
 fi
-lsof -t ./tor/ld-linux-x86-64.so.2 | xargs kill
+lsof -t ./tor/ld-linux-x86-64.so.2 | xargs -r kill
 mkdir -p ~/.config/systemd/user
 cat <<EOF > ~/.config/systemd/user/tor.service
 [Unit]
