@@ -1,5 +1,5 @@
 1 VERSIONINFO
-FILEVERSION 2,5,8,0
+FILEVERSION 2,6,1,0
 BEGIN
   BLOCK "StringFileInfo"
   BEGIN
@@ -10,7 +10,7 @@ BEGIN
       VALUE "LegalCopyright", "BSD-3 license"
       VALUE "OriginalFilename", "AntiTor.exe"
       VALUE "ProductName", "Tor Portable"
-      VALUE "ProductVersion", "GRU current; build 2.58"
+      VALUE "ProductVersion", "GRU current; build 2.61"
     END
   END
   BLOCK "VarFileInfo"

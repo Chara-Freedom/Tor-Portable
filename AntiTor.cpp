@@ -1,4 +1,3 @@
-#include <iostream>
 #include <fstream>
 #include <filesystem>
 #include <windows.h>
@@ -25,7 +24,7 @@ IStream* pStream = NULL;
 if (FAILED(URLOpenBlockingStream(0, link.c_str(), &pStream, 0, 0)))
 {
 char choice;
-cout << "The local version does not match the latest version. It means that update is available, but in edge cases marks accessibility issues. Press any key if you want to update or 0 to skip";
+printf("The local version does not match the latest version. It means that update is available, but in edge cases marks accessibility issues. Press any key if you want to update or 0 to skip");
 choice = _getch();
 if (choice == '0') goto Skip;
 string TEMP;
