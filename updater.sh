@@ -22,8 +22,11 @@ unzip ./AntiTor_linux_current.zip
 rm ./AntiTor_linux_current.zip
 cp -r ~/data ./
 rm -r ~/data
-if grep -q "The mode is pro" ./data/torrc.txt; then
-cp ./change-mode/pro/torrc.txt torrc.txt
+if grep -q "The mode is exit-1" ./data/torrc.txt; then
+cp ./change-mode/exit-1/torrc.txt torrc.txt
+fi
+if grep -q "The mode is exit-2" ./data/torrc.txt; then
+cp ./change-mode/exit-2/torrc.txt torrc.txt
 fi
 if grep -q "#MiddleNodes" ./data/torrc.txt; then
 sed -i 's/MiddleNodes/#MiddleNodes/' torrc.txt
