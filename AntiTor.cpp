@@ -12,7 +12,7 @@ filesystem::path pathname = fullpath;
 filesystem::current_path(fullpath.remove_filename());
 char buffer[256];
 string UPD;
-FILE* pipe1 = _popen("@echo off & for %I in (VERSION*) do echo %~nxI", "r");
+FILE* pipe1 = _popen("for %I in (VERSION*) do echo %~nxI", "r");
 while (fgets(buffer, sizeof(buffer), pipe1) != NULL) {
 buffer[strcspn(buffer, "\n")] = 0;
 UPD = buffer;
