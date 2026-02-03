@@ -39,6 +39,6 @@ fi
 rm ./data/torrc.txt
 if grep -q "The mode is custom" ~/change-mode/custom/torrc.txt; then
 cp ~/change-mode/custom/torrc.txt ./change-mode/custom/torrc.txt
-rm -r ~/change-mode/custom
+rm -r ~/change-mode
 cp ./change-mode/custom/torrc.txt torrc.txt
 fi
