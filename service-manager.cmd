@@ -68,13 +68,13 @@ if %errorlevel% EQU 0 (
    sc stop "Tor Win32 Service"
    sc delete "Tor Win32 Service"
    powershell -Command "(gc '%CD%\torrc.txt') "^
-  "-replace '^DataDirectory.*$', ('DataDirectory ../data/user-data') "^
+  "-replace '^DataDirectory.*$', ('DataDirectory ../data') "^
   "-replace '^GeoIPFile.*$', ('GeoIPFile geoip') "^
   "-replace '^GeoIPv6File.*$', ('GeoIPv6File geoip6') "^
   "| Out-File -encoding default '%CD%\torrc.txt'"
 ) else (
     powershell -Command "(gc '%CD%\torrc.txt') "^
-      "-replace '^DataDirectory.*$', ('DataDirectory \"%CD%\data\user-data\"' -replace '\\','\\') "^
+      "-replace '^DataDirectory.*$', ('DataDirectory \"%CD%\data\"' -replace '\\','\\') "^
       "-replace '^GeoIPFile.*$', ('GeoIPFile \"%CD%\tor\geoip\"' -replace '\\','\\') "^
       "-replace '^GeoIPv6File.*$', ('GeoIPv6File \"%CD%\tor\geoip6\"' -replace '\\','\\') "^
       "| Out-File -encoding default '%CD%\torrc.txt'"
