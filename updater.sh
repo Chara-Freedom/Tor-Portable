@@ -16,6 +16,10 @@ systemctl --user disable tor.service --now
 rm ~/.config/systemd/user/tor.service
 cp ./torrc.txt ./data/torrc.txt
 cp -r ./data ~/data
+if grep -q "The mode is custom" ./torrc.txt; then
+cp ./torrc.txt ./change-mode/custom/torrc.txt
+cp -r ./change-mode/custom ~/change-mode/custom
+fi
 rm -r *
 curl "https://ipfs.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/AntiTor_linux_current.zip" -O
 unzip ./AntiTor_linux_current.zip
@@ -30,4 +34,10 @@ cp ./change-mode/exit-2/torrc.txt torrc.txt
 fi
 if grep -q "#MiddleNodes" ./data/torrc.txt; then
 sed -i 's/MiddleNodes/#MiddleNodes/' torrc.txt
+fi
+rm ./data/torrc.txt
+if grep -q "The mode is custom" ~/change-mode/custom/torrc.txt; then
+cp ~/change-mode/custom/torrc.txt ./change-mode/custom/torrc.txt
+rm -r ~/change-mode/custom
+cp ./change-mode/custom/torrc.txt torrc.txt
 fi
