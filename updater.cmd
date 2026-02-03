@@ -32,17 +32,22 @@ echo @echo off
 echo del "%WAY%\AntiTor_win8+_current.zip"
 echo xcopy "%temp%\data" "%CD%\data" /i /e /y
 echo rmdir "%temp%\data" /s /q
-echo findstr /c:"The mode is exit-1" "%CD%\data\torrc.txt"
+echo xcopy "%temp%\change-mode\custom" "%CD%\change-mode\custom" /i /e /y
+echo rmdir "%temp%\change-mode\custom" /s /q
+echo findstr /c:"The mode is exit-1" "%CD%\change-mode\custom\torrc.txt"
 echo if %%errorlevel%% EQU 0 copy "%CD%\change-mode\exit-1\torrc.txt" "%CD%\torrc.txt"
-echo findstr /c:"The mode is exit-2" "%CD%\data\torrc.txt"
+echo findstr /c:"The mode is exit-2" "%CD%\change-mode\custom\torrc.txt"
 echo if %%errorlevel%% EQU 0 copy "%CD%\change-mode\exit-2\torrc.txt" "%CD%\torrc.txt"
-echo findstr /c:"#MiddleNodes" "%CD%\data\torrc.txt"
+echo findstr /c:"#MiddleNodes" "%CD%\change-mode\custom\torrc.txt"
 echo if %%errorlevel%% EQU 0 powershell -Command " (gc """%CD%\torrc.txt""") -replace 'MiddleNodes', '#MiddleNodes' | Out-File """%CD%\torrc.txt""" -encoding default
+echo findstr /c:"The mode is custom" "%CD%\change-mode\custom\torrc.txt"
+echo if %%errorlevel%% EQU 0 copy "%CD%\change-mode\custom\torrc.txt" "%CD%\torrc.txt"
 echo del "%temp%\updater.cmd"
 echo del "%temp%\extractor.vbs"
 echo del "%temp%\cleaner.cmd"
 )>"%temp%\cleaner.cmd"
-copy "%CD%\torrc.txt" "%CD%\data\torrc.txt"
+copy "%CD%\torrc.txt" "%CD%\change-mode\custom\torrc.txt"
 xcopy "%CD%\data" "%temp%\data" /i /e /y
+xcopy "%CD%\change-mode\custom" "%temp%\change-mode\custom" /i /e /y
 start "" cmd /c "%temp%\updater.cmd"
 rmdir "%CD%" /s /q
