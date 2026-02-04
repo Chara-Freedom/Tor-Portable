@@ -27,6 +27,7 @@ pause
 )
 if %errorlevel% EQU 4 (
 copy "%CD%\change-mode\custom\torrc.txt" "%CD%\torrc.txt"
+type nul > "%CD%\change-mode\custom\trace"
 echo The mode was changed to custom.
 pause
 )
