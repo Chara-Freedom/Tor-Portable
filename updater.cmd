@@ -43,6 +43,8 @@ echo del "%CD%\data\torrc.txt"
 echo findstr /c:"The mode is custom" "%temp%\change-mode\custom\torrc.txt"
 echo if %%errorlevel%% EQU 0 copy "%CD%\change-mode\custom\torrc.txt" "%CD%\torrc.txt"
 echo rmdir "%temp%\change-mode" /s /q
+echo copy "%TEMP%\torrc.txt" "%CD%\change-mode\custom\torrc.txt"
+echo del "%TEMP%\torrc.txt"
 echo del "%temp%\updater.cmd"
 echo del "%temp%\extractor.vbs"
 echo del "%temp%\cleaner.cmd"
@@ -52,6 +54,7 @@ if %errorlevel% EQU 0 (
 copy "%CD%\torrc.txt" "%CD%\change-mode\custom\torrc.txt"
 xcopy "%CD%\change-mode\custom" "%temp%\change-mode\custom" /i /e /y
 )
+if %errorlevel% NEQ 0 if exist "%CD%\change-mode\custom\trace" "%CD%\change-mode\custom\torrc.txt" "%TEMP%\torrc.txt"
 copy "%CD%\torrc.txt" "%CD%\data\torrc.txt"
 xcopy "%CD%\data" "%temp%\data" /i /e /y
 start "" cmd /c "%temp%\updater.cmd"
