@@ -54,7 +54,7 @@ if %errorlevel% EQU 0 (
 copy "%CD%\torrc.txt" "%CD%\change-mode\custom\torrc.txt"
 xcopy "%CD%\change-mode\custom" "%temp%\change-mode\custom" /i /e /y
 )
-if %errorlevel% NEQ 0 if exist "%CD%\change-mode\custom\trace" "%CD%\change-mode\custom\torrc.txt" "%TEMP%\torrc.txt"
+if %errorlevel% NEQ 0 if exist "%CD%\change-mode\custom\trace" copy "%CD%\change-mode\custom\torrc.txt" "%TEMP%\torrc.txt"
 copy "%CD%\torrc.txt" "%CD%\data\torrc.txt"
 xcopy "%CD%\data" "%temp%\data" /i /e /y
 start "" cmd /c "%temp%\updater.cmd"
