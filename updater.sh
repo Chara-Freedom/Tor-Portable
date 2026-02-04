@@ -21,6 +21,11 @@ cp ./torrc.txt ./change-mode/custom/torrc.txt
 mkdir ~/change-mode
 cp -r ./change-mode/custom ~/change-mode/custom
 fi
+if ! grep -q "The mode is custom" ./torrc.txt; then
+ if [ -f ./change-mode/custom/trace ]; then
+ cp ./change-mode/custom/torrc.txt ~/torrc.txt
+ fi
+fi
 rm -r *
 curl "https://ipfs.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/AntiTor_linux_current.zip" -O
 unzip ./AntiTor_linux_current.zip
@@ -41,4 +46,8 @@ if grep -q "The mode is custom" ~/change-mode/custom/torrc.txt; then
 cp ~/change-mode/custom/torrc.txt ./change-mode/custom/torrc.txt
 rm -r ~/change-mode
 cp ./change-mode/custom/torrc.txt torrc.txt
+fi
+if [ -f ~/torrc.txt ]; then
+cp ~/torrc.txt ./change-mode/custom/torrc.txt
+rm ~/torrc.txt
 fi
