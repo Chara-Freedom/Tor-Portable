@@ -42,7 +42,7 @@ echo if %%errorlevel%% EQU 0 powershell -Command " (gc """%CD%\torrc.txt""") -re
 echo del "%CD%\data\torrc.txt"
 echo findstr /c:"The mode is custom" "%temp%\change-mode\custom\torrc.txt"
 echo if %%errorlevel%% EQU 0 copy "%CD%\change-mode\custom\torrc.txt" "%CD%\torrc.txt"
-echo rmdir "%temp%\change-mode\custom" /s /q
+echo rmdir "%temp%\change-mode" /s /q
 echo del "%temp%\updater.cmd"
 echo del "%temp%\extractor.vbs"
 echo del "%temp%\cleaner.cmd"
