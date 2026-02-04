@@ -48,10 +48,8 @@ echo del "%temp%\extractor.vbs"
 echo del "%temp%\cleaner.cmd"
 )>"%temp%\cleaner.cmd"
 findstr /c:"The mode is custom" "%CD%\torrc.txt"
-if %errorlevel% EQU 0 (
-copy "%CD%\torrc.txt" "%CD%\change-mode\custom\torrc.txt"
+if %errorlevel% EQU 0 copy "%CD%\torrc.txt" "%CD%\change-mode\custom\torrc.txt"
 xcopy "%CD%\change-mode\custom" "%temp%\change-mode\custom" /i /e /y
-)
 copy "%CD%\torrc.txt" "%CD%\data\torrc.txt"
 xcopy "%CD%\data" "%temp%\data" /i /e /y
 start "" cmd /c "%temp%\updater.cmd"
