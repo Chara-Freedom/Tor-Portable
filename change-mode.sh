@@ -25,6 +25,7 @@ fi
 if [[ $INP = 3 ]]; then
 echo
 cp ./change-mode/custom/torrc.txt torrc.txt
+touch ./change-mode/custom/trace
 read -p "The mode was changed to custom."
 fi
 if [[ $INP = 4 ]]; then
