@@ -24,6 +24,7 @@ fi
 if ! grep -q "The mode is custom" ./torrc.txt; then
  if [ -f ./change-mode/custom/trace ]; then
  cp ./change-mode/custom/torrc.txt ~/torrc.txt
+ cp ./change-mode/custom/trace ~/trace
  fi
 fi
 rm -r *
@@ -50,4 +51,8 @@ fi
 if [ -f ~/torrc.txt ]; then
 cp ~/torrc.txt ./change-mode/custom/torrc.txt
 rm ~/torrc.txt
+fi
+if [ -f ~/trace ]; then
+cp ~/trace ./change-mode/custom/trace
+rm ~/trace
 fi
