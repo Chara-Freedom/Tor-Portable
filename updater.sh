@@ -51,8 +51,6 @@ fi
 if [ -f ~/torrc.txt ]; then
 cp ~/torrc.txt ./change-mode/custom/torrc.txt
 rm ~/torrc.txt
-fi
-if [ -f ~/trace ]; then
 cp ~/trace ./change-mode/custom/trace
 rm ~/trace
 fi
