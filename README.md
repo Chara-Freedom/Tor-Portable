@@ -91,7 +91,7 @@ ZeroOmega has a very advanced address parser. It can be used to refill domains i
 
 Tor Portable has change-mode file with various configurations. Switching to exit modes is necessary to partially compensate for the lack of hidden Tor exits, since sometimes sites impose restrictions on them, such as the inability to send images in Discord or some inaccessible music videos on YouTube, or inability to talk with Gemini. But the random-exit mode uses completely random exits (so these restrictions are triggered randomly), and should survive much longer, while even having a specified exit mode won't help you avoid restrictions on some sites.
 
-Custom mode is special. Unlike exit modes, it saves your settings, and can be used for personal configuration. To use custom mode, follow this pattern: 1) switch to custom using change-mode 2) write something inside 3) manually start updater; the custom file in change-mode folder will be mirrored to your configuration. If you want to reset custom, switch to another mode, delete change-mode/custom/trace file and start updater.
+Custom mode is special. Unlike exit modes, it saves your settings, and can be used for personal configuration. To use custom mode, follow this pattern: 1) switch to custom using change-mode; 2) write something inside; 3) manually start updater, the custom file in change-mode folder will be mirrored to your configuration. If you want to reset custom, switch to another mode, delete change-mode/custom/trace file and start updater. By default, the custom mode behaves the same as random-exit.
 
 ![5](https://github.com/user-attachments/assets/bc404d5e-f8eb-498d-a894-1aade051eedb)
 
