@@ -44,7 +44,7 @@ sed -i 's/MiddleNodes/#MiddleNodes/' torrc.txt
 fi
 rm ./data/torrc.txt
 if grep -q "The mode is custom" ~/change-mode/custom/torrc.txt; then
-cp ~/change-mode/custom/torrc.txt ./change-mode/custom/torrc.txt
+cp -r ~/change-mode/custom ./change-mode
 rm -r ~/change-mode
 cp ./change-mode/custom/torrc.txt torrc.txt
 fi
