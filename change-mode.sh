@@ -11,28 +11,28 @@ while [[ -n $INP ]]; do
 echo
 if [[ $INP = 0 ]]; then
 cp ./change-mode/random-exit/torrc.txt torrc.txt
-read -n 1 -p "The mode was changed to random-exit." INP
+read -n 1 -p "The mode was changed to random-exit. " INP
 fi
 if [[ $INP = 1 ]]; then
 cp ./change-mode/exit-1/torrc.txt torrc.txt
-read -n 1 -p "The mode was changed to exit-1." INP
+read -n 1 -p "The mode was changed to exit-1. " INP
 fi
 if [[ $INP = 2 ]]; then
 cp ./change-mode/exit-2/torrc.txt torrc.txt
-read -n 1 -p "The mode was changed to exit-2." INP
+read -n 1 -p "The mode was changed to exit-2. " INP
 fi
 if [[ $INP = 3 ]]; then
 cp ./change-mode/custom/torrc.txt torrc.txt
 touch ./change-mode/custom/trace
-read -n 1 -p "The mode was changed to custom." INP
+read -n 1 -p "The mode was changed to custom. " INP
 fi
 if [[ $INP = 4 ]]; then
  if grep -q "#MiddleNodes" torrc.txt; then
- read -n 1 -p "Middle nodes are already not in use." INP
+ read -n 1 -p "Middle nodes are already not in use. " INP
  fi
  if ! grep -q "#MiddleNodes" torrc.txt; then
  sed -i 's/MiddleNodes/#MiddleNodes/' torrc.txt
- read -n 1 -p "Middle nodes were removed." INP
+ read -n 1 -p "Middle nodes were removed. " INP
  fi
 fi
 done
