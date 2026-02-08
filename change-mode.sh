@@ -7,6 +7,7 @@ echo "Welcome to the mode control panel."
 echo
 echo "Do you want to set the mode to random-exit (0, default), set the mode to exit-1 (1), set the mode to exit-2 (2), set the mode to custom (3), or remove middle nodes (4, applies to any other mode)?"
 read -n 1 -p "" INP
+while [[ -n $INP ]]; do
 if [[ $INP = 0 ]]; then
 echo
 cp ./change-mode/random-exit/torrc.txt torrc.txt
@@ -32,8 +33,10 @@ if [[ $INP = 4 ]]; then
 echo
  if grep -q "#MiddleNodes" torrc.txt; then
  read -p "Middle nodes are already not in use."
- exit
  fi
-sed -i 's/MiddleNodes/#MiddleNodes/' torrc.txt
-read -p "Middle nodes were removed."
+ if ! grep -q "#MiddleNodes" torrc.txt; then
+ sed -i 's/MiddleNodes/#MiddleNodes/' torrc.txt
+ read -p "Middle nodes were removed."
+ fi
 fi
+done
