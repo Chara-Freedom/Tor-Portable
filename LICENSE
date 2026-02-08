@@ -31,7 +31,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 Below there are licenses for Tor and GRU current that are used as
-parts of Tor Portable concept.
+integral parts of Tor Portable concept.
 
 ZeroOmega is also used, and is licensed under GPL-3, but the source
 code doesn't contain any of its files; only the automatically
