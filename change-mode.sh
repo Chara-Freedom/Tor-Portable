@@ -7,8 +7,8 @@ echo "Welcome to the mode control panel."
 echo
 echo "Do you want to set the mode to random-exit (0, default), set the mode to exit-1 (1), set the mode to exit-2 (2), set the mode to custom (3), or remove middle nodes (4, applies to any other mode)?"
 read -n 1 -p "" INP
-while [[ -n $INP ]]; do
 echo
+while [[ -n $INP ]]; do
 if [[ $INP = 0 ]]; then
 cp ./change-mode/random-exit/torrc.txt torrc.txt
 read -n 1 -p "The mode was changed to random-exit. " INP
