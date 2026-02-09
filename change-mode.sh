@@ -5,8 +5,7 @@ systemctl --user disable tor.service --now
 rm ~/.config/systemd/user/tor.service
 echo "Welcome to the mode control panel."
 echo
-echo "Do you want to set the mode to random-exit (0, default), set the mode to exit-1 (1), set the mode to exit-2 (2), set the mode to custom (3), or remove middle nodes (4, applies to any other mode)?"
-read -n 1 -p "" INP
+read -n 1 -p "Do you want to set the mode to random-exit (0, default), set the mode to exit-1 (1), set the mode to exit-2 (2), set the mode to custom (3), or remove middle nodes (4, applies to any other mode)?" INP
 echo
 while [[ -n $INP ]]; do
 if [[ $INP = 0 ]]; then
