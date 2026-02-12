@@ -2,11 +2,12 @@
 cd "$(dirname "$0")"
 ping -c 1 ipfs.io
 if [ $? -ne 0 ]; then
-read -p "I need ipfs.io connectivity to update. Please check your Internet connection."
+read -p "I need ipfs.io connectivity to update. Please check your Internet connection. "
 exit
 fi
 if [[ $(ls -d */ | wc -l) -gt 7 || $(find . -maxdepth 1 -type f | wc -l) -gt 9 ]]; then
-read -n 1 -p "There are too many files to update. You don't want to run the updater in a folder with your personal files. Press any key if you want to exit or 0 if you want to update anyway." INP
+read -n 1 -p "There are too many files to update. You don't want to run the updater in a folder with your personal files. Press any key if you want to exit or 0 if you want to update anyway. " INP
+echo
  if [ $INP != 0 ]; then
  exit
  fi
