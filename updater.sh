@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 cd "$(dirname "$0")"
-curl "https://ipfs.filebase.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/test.txt" -f -s -o /dev/null
+curl "https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/test.txt" -f -s -o /dev/null
 if [ $? -eq 22 ]; then
 read -p "I need ipfs connectivity to update. Please check your Internet connection. "
 exit
