@@ -38,7 +38,7 @@ REM :::::::::::::::::::::::::
 REM Run shell as admin - put your code below as you like
 setlocal EnableDelayedExpansion
 for %%I in (VERSION*) do set "UPD=%%~nxI"
-powershell -Command "(New-Object Net.WebClient).DownloadFile('https://ipfs.filebase.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/%UPD%', '%temp%\%UPD%')" >nul
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/%UPD%', '%temp%\%UPD%')" >nul
 if %errorlevel% NEQ 0 (
 sc query "Tor Win32 Service" >nul
 if !errorlevel! EQU 0 set "CHECK=0" & goto Service
