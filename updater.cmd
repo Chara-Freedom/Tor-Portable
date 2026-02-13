@@ -1,10 +1,11 @@
 @echo off & cd /d "%~dp0"
-ping ipfs.io -n 1
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://ipfs.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/test.txt', '%temp%\test.txt')" >nul
 if %errorlevel% NEQ 0 (
 echo I need ipfs.io connectivity to update. Please check your Internet connection.
 pause
 exit
 )
+del "%temp%\test.txt"
 set countfile=0 & for %%f in (*) do set /a countfile+=1
 set countfolder=0 & for /D %%a in ("%CD%\*") do set /a countfolder+=1
 if %countfile% lss 9 if %countfolder% lss 8 goto Skip
