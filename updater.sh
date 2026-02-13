@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 cd "$(dirname "$0")"
-ping -c 1 ipfs.io
-if [ $? -ne 0 ]; then
-read -p "I need ipfs.io connectivity to update. Please check your Internet connection. "
+curl "https://ipfs.filebase.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/test.txt" -f -s -o /dev/null
+if [ $? -eq 22 ]; then
+read -p "I need ipfs connectivity to update. Please check your Internet connection. "
 exit
 fi
 if [[ $(ls -d */ | wc -l) -gt 7 || $(find . -maxdepth 1 -type f | wc -l) -gt 9 ]]; then
