@@ -21,7 +21,7 @@ timeout /t 3 /nobreak >nul
 )
 (
 echo @echo off
-echo powershell -Command "(New-Object Net.WebClient).DownloadFile('https://ipfs.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/AntiTor_win8+_current.zip', '%WAY%\AntiTor_win8+_current.zip')"
+echo powershell -Command "(New-Object Net.WebClient).DownloadFile('https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/AntiTor_win8+_current.zip', '%WAY%\AntiTor_win8+_current.zip')"
 echo cscript "%temp%\extractor.vbs"
 )>"%temp%\updater.cmd"
 (
