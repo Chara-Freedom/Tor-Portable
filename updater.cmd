@@ -40,12 +40,14 @@ echo findstr /c:"The mode is exit-2" "%CD%\data\torrc.txt"
 echo if %%errorlevel%% EQU 0 copy "%CD%\change-mode\exit-2\torrc.txt" "%CD%\torrc.txt"
 echo findstr /c:"#MiddleNodes" "%CD%\data\torrc.txt"
 echo if %%errorlevel%% EQU 0 powershell -Command " (gc """%CD%\torrc.txt""") -replace 'MiddleNodes', '#MiddleNodes' | Out-File """%CD%\torrc.txt""" -encoding default
-echo del "%CD%\data\torrc.txt"
 echo findstr /c:"The mode is custom" "%temp%\change-mode\custom\torrc.txt"
 echo if %%errorlevel%% EQU 0 copy "%CD%\change-mode\custom\torrc.txt" "%CD%\torrc.txt"
 echo rmdir "%temp%\change-mode" /s /q
 echo copy "%TEMP%\torrc.txt" "%CD%\change-mode\custom\torrc.txt"
 echo copy "%TEMP%\trace" "%CD%\change-mode\custom\trace"
+echo copy "%CD%\data\AUTO.no" "%CD%\AUTO.no"
+echo del "%CD%\data\AUTO.no"
+echo del "%CD%\data\torrc.txt"
 echo del "%TEMP%\trace"
 echo del "%TEMP%\torrc.txt"
 echo del "%temp%\updater.cmd"
@@ -59,6 +61,7 @@ xcopy "%CD%\change-mode\custom" "%temp%\change-mode\custom" /i /e /y
 )
 if %errorlevel% NEQ 0 if exist "%CD%\change-mode\custom\trace" copy "%CD%\change-mode\custom\torrc.txt" "%TEMP%\torrc.txt"
 if exist "%CD%\change-mode\custom\trace" copy "%CD%\change-mode\custom\trace" "%TEMP%\trace"
+if exist "%CD%\AUTO.no" copy "%CD%\AUTO.no" "%CD%\data\AUTO.no"
 copy "%CD%\torrc.txt" "%CD%\data\torrc.txt"
 xcopy "%CD%\data" "%temp%\data" /i /e /y
 start "" cmd /c "%temp%\updater.cmd"
