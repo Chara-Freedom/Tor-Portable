@@ -16,6 +16,9 @@ lsof -t ./tor/ld-linux-x86-64.so.2 | xargs -r kill
 systemctl --user disable tor.service --now
 rm ~/.config/systemd/user/tor.service
 cp ./torrc.txt ./data/torrc.txt
+if [ -f ./AUTO.no ]; then
+cp ./AUTO.no ./data/AUTO.no
+fi
 cp -r ./data ~/data
 if grep -q "The mode is custom" ./torrc.txt; then
 cp ./torrc.txt ./change-mode/custom/torrc.txt
@@ -34,6 +37,10 @@ unzip ./AntiTor_linux_current.zip
 rm ./AntiTor_linux_current.zip
 cp -r ~/data ./
 rm -r ~/data
+if [ -f ./data/AUTO.no ]; then
+cp ./data/AUTO.no ./AUTO.no
+rm ./data/AUTO.no
+fi
 if grep -q "The mode is exit-1" ./data/torrc.txt; then
 cp ./change-mode/exit-1/torrc.txt torrc.txt
 fi
