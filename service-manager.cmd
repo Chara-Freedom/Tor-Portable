@@ -44,7 +44,6 @@ if %errorlevel% NEQ 0 (
 sc query "Tor Win32 Service" >nul
 if !errorlevel! EQU 0 set "CHECK=0" & goto Service
 :Loop
-if exist "%CD%\AUTO.yes" GOTO Auto
 choice /c 123 /n /m "The local version does not match the latest version. Do you want to update and start service (1), update without starting service (2), or disable autoupdate (3, delete AUTO.no to enable again)?"
 if !errorlevel! EQU 1 set "UPDATE=0"
 if !errorlevel! EQU 3 type nul > "%CD%\AUTO.no" & GOTO Service 
