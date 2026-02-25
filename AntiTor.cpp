@@ -10,6 +10,8 @@ GetModuleFileNameW(NULL, path, MAX_PATH);
 filesystem::path fullpath(path);
 filesystem::path pathname = fullpath;
 filesystem::current_path(fullpath.remove_filename());
+string stringpath = fullpath.generic_string();
+string autocheck = stringpath + "AUTO.no";
 char buffer[256];
 string UPD;
 FILE* pipe1 = _popen("for %I in (VERSION*) do echo %~nxI", "r");
@@ -21,12 +23,15 @@ _pclose(pipe1);
 string link;
 if (UPD.find('V') != string::npos) link = "https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/" + UPD;
 IStream* pStream = NULL;
-if (FAILED(URLOpenBlockingStream(0, link.c_str(), &pStream, 0, 0)))
-{
+if (filesystem::exists (autocheck)) goto Skip;
+if (FAILED(URLOpenBlockingStream(0, link.c_str(), &pStream, 0, 0))) {
 char choice;
-printf("The local version does not match the latest version. It means that update is available, but in edge cases marks accessibility issues. Press any key if you want to update or 0 to skip");
+printf("The local version does not match the latest version. It means that update is available, but in edge cases marks accessibility issues. Press any key if you want to update or 0 to to disable autoupdate (delete AUTO.no to enable again)");
 choice = _getch();
-if (choice == '0') goto Skip;
+if (choice == '0') {
+ofstream MyFile(autocheck);
+goto Skip;
+}
 string TEMP;
 FILE* pipe2 = _popen("echo %TEMP%", "r");
 while (fgets(buffer, sizeof(buffer), pipe2) != NULL) {
