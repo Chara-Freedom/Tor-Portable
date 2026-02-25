@@ -4,7 +4,7 @@ REM Elevate.cmd - Freedom edition
 REM Automatically check & get admin rights
 REM See "https://stackoverflow.com/a/79585058" for description
 REM :::::::::::::::::::::::::::::::::::::::::
- 
+
  ECHO/
  ECHO =============================
  ECHO Running Admin shell
@@ -24,7 +24,7 @@ REM :::::::::::::::::::::::::::::::::::::::::
   ECHO **************************************
   ECHO Invoking UAC for Privilege Escalation
   ECHO **************************************
- 
+
   %SystemRoot%\System32\cmd.exe /u /c ECHO CreateObject("Shell.Application").ShellExecute "%SystemRoot%\System32\cmd.exe", "/c""%~f0""", "", "runas", 1 >"%vbsGetPrivileges%"
   %SystemRoot%\System32\cmd.exe /u /c ECHO CreateObject("Scripting.FileSystemObject").DeleteFile "%vbsGetPrivileges%">>"%vbsGetPrivileges%"
 
@@ -37,15 +37,17 @@ REM START
 REM :::::::::::::::::::::::::
 REM Run shell as admin - put your code below as you like
 setlocal EnableDelayedExpansion
+if exist "%CD%\AUTO.no" GOTO Service
 for %%I in (VERSION*) do set "UPD=%%~nxI"
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/%UPD%', '%temp%\%UPD%')" >nul
 if %errorlevel% NEQ 0 (
 sc query "Tor Win32 Service" >nul
 if !errorlevel! EQU 0 set "CHECK=0" & goto Service
 :Loop
-choice /c 123 /n /m "The local version does not match the latest version. Do you want to update and start service (1), update without starting service (2), or skip update (3)?"
+if exist "%CD%\AUTO.yes" GOTO Auto
+choice /c 123 /n /m "The local version does not match the latest version. Do you want to update and start service (1), update without starting service (2), or disable autoupdate (3, delete AUTO.no to enable again)?"
 if !errorlevel! EQU 1 set "UPDATE=0"
-if !errorlevel! EQU 3 GOTO Service
+if !errorlevel! EQU 3 type nul > "%CD%\AUTO.no" & GOTO Service 
 echo @echo off>"%temp%\autoupdater.cmd"
 echo call "%CD%\updater.cmd">>"%temp%\autoupdater.cmd"
 echo cls>>"%temp%\autoupdater.cmd"
