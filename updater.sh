@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 cd "$(dirname "$0")"
 curl "https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/test.txt" -f -s -o /dev/null
-if [ $? -eq 22 ]; then
+if [ $? = 22 ]; then
 read -p "I need ipfs connectivity to update. Please check your Internet connection. "
 exit
 fi
-if [[ $(ls -d */ | wc -l) -gt 7 || $(find . -maxdepth 1 -type f | wc -l) -gt 9 ]]; then
+if [[ $(ls -d */ | wc -l) -gt 7 || $(find . -maxdepth 1 -type f | wc -l) -gt 10 ]]; then
 read -n 1 -p "There are too many files to update. You don't want to run the updater in a folder with your personal files. Press any key if you want to exit or 0 if you want to update anyway. " INP
 echo
  if [ $INP != 0 ]; then
