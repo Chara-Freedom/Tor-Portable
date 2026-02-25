@@ -26,7 +26,7 @@ IStream* pStream = NULL;
 if (filesystem::exists (autocheck)) goto Skip;
 if (FAILED(URLOpenBlockingStream(0, link.c_str(), &pStream, 0, 0))) {
 char choice;
-printf("The local version does not match the latest version. It means that update is available, but in edge cases marks accessibility issues. Press any key if you want to update or 0 to to disable autoupdate (delete AUTO.no to enable again)");
+printf("The local version does not match the latest version. It means that update is available, but in edge cases marks accessibility issues. Press any key if you want to update or 0 to disable autoupdate (delete AUTO.no to enable again)");
 choice = _getch();
 if (choice == '0') {
 ofstream MyFile(autocheck);
