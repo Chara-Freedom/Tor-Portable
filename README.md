@@ -2,7 +2,7 @@
 
 [Telegram channel](https://t.me/Tor_Portable)
 
-[Tutorial to use Tor Portable to unlock Telegram](https://t.me/Tor_Portable/131)
+[Tutorial to use Tor Portable to unlock Telegram](https://t.me/Tor_Portable/149)
 
 **Keep It Functional, F#####!** 🤘
 
