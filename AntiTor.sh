@@ -13,5 +13,4 @@ echo
  fi
 fi
 cd tor
-./ipns-republisher.sh &
 ./ld-linux-x86-64.so.2 --library-path . ./tor -f ../torrc.txt
