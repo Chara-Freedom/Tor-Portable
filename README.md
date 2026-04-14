@@ -95,10 +95,10 @@ Custom mode is special. Unlike exit modes, it saves your settings, and can be us
 
 ![5](https://github.com/user-attachments/assets/bc404d5e-f8eb-498d-a894-1aade051eedb)
 
-Tor checks for updates every time it launches. This may slightly slow down startup time. If you want to disable automatic update checking, delete the VERSION file, restart Tor, and choose to disable automatic updates in the pop-up window.
-
 If you want to try to completely avoid restrictions from sites like Grok.com, you should install [Psiphon TM](https://github.com/Chara-Freedom/Tor-Portable/releases/tag/v1.0), and change the setting of VIRTUAL mode from TOR to PROXY. But I'm not recommending this to everyone, since Psiphon TM is not that properly developed (at the time of writing), and is much slower than Tor.
 
 Updater is updater. It updates everything fast and seamlessly. I'm really proud that I made it. [It follows GRU current system](https://github.com/Chara-Freedom/GRU-current), which was developed by me and is licensed under MPL 2.0.
+
+Tor checks for updates every time it launches. This may slightly slow down startup time. If you want to disable automatic update checking, delete the VERSION file, restart Tor, and choose to disable automatic updates in the pop-up window.
 
 That's all for now. You can write anything to me [here](https://github.com/Chara-Freedom/Tor-Portable/issues/8). Good luck.
