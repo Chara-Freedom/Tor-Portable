@@ -44,7 +44,7 @@ WantedBy=default.target
 EOF
 systemctl --user enable tor.service --now
 if [ ! -f $(pwd)/data/state ]; then
-echo "PLease wait 10 seconds while I load the data"
+echo "Please wait 10 seconds while I load the data"
 sleep 10
 else
 sleep 2
