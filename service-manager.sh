@@ -10,7 +10,7 @@ systemctl --user is-active --quiet tor.service
  CHECK=0
  fi
  if [ $INP != 0 ]; then
- ./updater.sh
+ "./updater.sh"
  fi
  if [ $INP = 0 ]; then
  touch "./AUTO.no"
@@ -43,10 +43,10 @@ ExecStart=$(pwd)/AntiTor.sh
 WantedBy=default.target
 EOF
 systemctl --user enable tor.service --now
-if [ ! -f $(pwd)/data/state ]; then
+if [ ! -f "$(pwd)/data/state" ]; then
 echo "Please wait 10 seconds while I load the data"
 sleep 10
 else
 sleep 2
 fi
-./service-check.sh
+"./service-check.sh"
