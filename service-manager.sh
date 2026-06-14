@@ -23,7 +23,7 @@ if systemctl --user is-active --quiet tor.service; then
 systemctl --user disable tor.service --now
 rm ~/.config/systemd/user/tor.service
 systemctl --user status tor.service
-read -p "Tor service was deleted"
+read -n 1 -p "Tor service was deleted "
 exit
 fi
 lsof -t ./tor/ld-linux-x86-64.so.2 | xargs -r kill
