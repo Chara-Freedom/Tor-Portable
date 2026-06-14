@@ -1,8 +1,24 @@
 #!/usr/bin/env bash
 cd "$(dirname "$0")"
+if [[ ! command -v curl >/dev/null 2>&1 || ! command -v unzip >/dev/null 2>&1 || ! command -v lsof >/dev/null 2>&1 ]]; then
+ if ! command -v curl >/dev/null 2>&1; then
+ echo "Error: curl is not installed. "
+ echo
+ fi
+ if ! command -v unzip >/dev/null 2>&1; then
+ echo "Error: unzip is not installed. "
+ echo
+ fi
+ if ! command -v lsof >/dev/null 2>&1; then
+ echo "Error: lsof is not installed. "
+ echo
+ fi
+read -n 1 -p ""
+exit
+fi
 curl "https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/test.txt" -f -s -o /dev/null
 if [ $? = 22 ]; then
-read -p "I need ipfs connectivity to update. Please check your Internet connection. "
+read -n 1 -p "I need ipfs connectivity to update. Please check your Internet connection. "
 exit
 fi
 if [[ $(ls -d */ | wc -l) -gt 7 || $(find . -maxdepth 1 -type f | wc -l) -gt 10 ]]; then
