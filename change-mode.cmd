@@ -8,7 +8,7 @@ timeout /t 3 /nobreak
 )
 Echo Welcome to the mode control panel.
 Echo.
-Echo Do you want to set the mode to random-exit (0, default), set the mode to exit-1 (1), set the mode to exit-2 (2), set the mode to custom (3), or remove middle nodes (4, applies to any other mode)?
+Echo Do you want to set the mode to random-exit (0, default), set the mode to exit-1 (1), set the mode to exit-2 (2), set the mode to custom (3), or add/remove middle nodes (4, applies to any other mode)?
 :Choice
 choice /c 01234 /n
 if %errorlevel% EQU 1 (
@@ -31,7 +31,8 @@ echo The mode was changed to custom.
 if %errorlevel% EQU 5 (
 findstr /c:"#MiddleNodes" torrc.txt
 if !errorlevel! EQU 0 (
-echo Middle nodes are already not in use.
+powershell -Command " (gc """%CD%\torrc.txt""") -replace '#MiddleNodes', 'MiddleNodes' | Out-File """%CD%\torrc.txt""" -encoding default
+echo Middle nodes were added.
 GOTO Choice
 )
 powershell -Command " (gc """%CD%\torrc.txt""") -replace 'MiddleNodes', '#MiddleNodes' | Out-File """%CD%\torrc.txt""" -encoding default
