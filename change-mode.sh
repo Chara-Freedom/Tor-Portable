@@ -5,7 +5,7 @@ systemctl --user disable tor.service --now
 rm ~/.config/systemd/user/tor.service
 echo "Welcome to the mode control panel."
 echo
-read -n 1 -p "Do you want to set the mode to random-exit (0, default), set the mode to exit-1 (1), set the mode to exit-2 (2), set the mode to custom (3), or remove middle nodes (4, applies to any other mode)? " INP
+read -n 1 -p "Do you want to set the mode to random-exit (0, default), set the mode to exit-1 (1), set the mode to exit-2 (2), set the mode to custom (3), or add/remove middle nodes (4, applies to any other mode)? " INP
 echo
 while [[ -n $INP ]]; do
 case $INP in
@@ -28,7 +28,8 @@ read -n 1 -p "The mode was changed to custom. " INP
 echo;;
 4)
 if grep -q "#MiddleNodes" "./torrc.txt"; then
-read -n 1 -p "Middle nodes are already not in use. " INP
+sed -i 's/#MiddleNodes/MiddleNodes/' "./torrc.txt"
+read -n 1 -p "Middle nodes were added. " INP
 echo
 fi
 if ! grep -q "#MiddleNodes" "./torrc.txt"; then
