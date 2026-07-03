@@ -1,18 +1,34 @@
 #!/usr/bin/env bash
 cd "$(dirname "$0")"
+if ! command -v curl >/dev/null 2>&1 || ! command -v unzip >/dev/null 2>&1 || ! command -v lsof >/dev/null 2>&1; then
+ if ! command -v curl >/dev/null 2>&1; then
+ echo "Error: curl is not installed."
+ echo
+ fi
+ if ! command -v unzip >/dev/null 2>&1; then
+ echo "Error: unzip is not installed."
+ echo
+ fi
+ if ! command -v lsof >/dev/null 2>&1; then
+ echo "Error: lsof is not installed."
+ echo
+ fi
+read -n 1 -p ""
+exit
+fi
 UPD=(VERSION*)
 curl "https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/$UPD" -f -s -o /dev/null
 if [[ $? = 22 && ! -f "./AUTO.no" ]]; then
 read -n 1 -p "The local version does not match the latest version. It means that update is available, but in edge cases marks accessibility issues. Press any key if you want to update or 0 to disable autoupdate (delete AUTO.no to enable again) " INP
 echo
 systemctl --user is-active --quiet tor.service
- if [ $? = 0 ]; then
+ if [[ $? = 0 ]]; then
  CHECK=0
  fi
- if [ $INP != 0 ]; then
+ if [[ $INP != 0 ]]; then
  "./updater.sh"
  fi
- if [ $INP = 0 ]; then
+ if [[ $INP = 0 ]]; then
  touch "./AUTO.no"
  fi
  if [[ $INP != 0 && $CHECK = 0 ]]; then
@@ -43,7 +59,7 @@ ExecStart=$(pwd)/AntiTor.sh
 WantedBy=default.target
 EOF
 systemctl --user enable tor.service --now
-if [ ! -f "$(pwd)/data/state" ]; then
+if [[ ! -f "$(pwd)/data/state" ]]; then
 echo "Please wait 10 seconds while I load the data"
 sleep 10
 else

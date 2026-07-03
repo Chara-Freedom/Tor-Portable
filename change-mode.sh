@@ -1,5 +1,21 @@
 #!/usr/bin/env bash
 cd "$(dirname "$0")"
+if ! command -v curl >/dev/null 2>&1 || ! command -v unzip >/dev/null 2>&1 || ! command -v lsof >/dev/null 2>&1; then
+ if ! command -v curl >/dev/null 2>&1; then
+ echo "Error: curl is not installed."
+ echo
+ fi
+ if ! command -v unzip >/dev/null 2>&1; then
+ echo "Error: unzip is not installed."
+ echo
+ fi
+ if ! command -v lsof >/dev/null 2>&1; then
+ echo "Error: lsof is not installed."
+ echo
+ fi
+read -n 1 -p ""
+exit
+fi
 lsof -t "./tor/ld-linux-x86-64.so.2" | xargs -r kill
 systemctl --user disable tor.service --now
 rm ~/.config/systemd/user/tor.service
@@ -27,12 +43,12 @@ touch "./change-mode/custom/trace"
 read -n 1 -p "The mode was changed to custom. " INP
 echo;;
 4)
-if grep -q "#MiddleNodes" "./torrc.txt"; then
+if grep -q "#MiddleNodes" "./torrc.txt" >/dev/null 2>&1; then
 sed -i 's/#MiddleNodes/MiddleNodes/' "./torrc.txt"
 read -n 1 -p "Middle nodes were added. " INP
 echo
 fi
-if ! grep -q "#MiddleNodes" "./torrc.txt"; then
+if ! grep -q "#MiddleNodes" "./torrc.txt" >/dev/null 2>&1; then
 sed -i 's/MiddleNodes/#MiddleNodes/' "./torrc.txt"
 read -n 1 -p "Middle nodes were removed. " INP
 echo
