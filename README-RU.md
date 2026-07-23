@@ -23,15 +23,7 @@
 0xb9569717b5f1ee67a2ace2b999a61e3d8d4cce52 USDT BEP20 — Chara Freedom (портативный Тор)  
 **https://antizapret.prostovpn.org/donate.html — ValdikSS (прокси Антизапрет, ВАЖНО в ноябре и декабре каждого года)**
 
-**Пожалуйста, оставьте звезду:**
-
-<a href="https://www.star-history.com/#Chara-Freedom/Tor-Portable&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Chara-Freedom/Tor-Portable&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Chara-Freedom/Tor-Portable&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Chara-Freedom/Tor-Portable&type=date&legend=top-left" />
- </picture>
-</a>
+**Пожалуйста, оставьте звезду.**
 
 Разработано при поддержке сообщества (в особенности отмечу помощь от [bananakid](https://github.com/anticensority/runet-censorship-bypass/issues/224#issuecomment-2025676123) и [DesuIsALie](https://github.com/Chara-Freedom/Tor-Portable/issues/2#issuecomment-2362230547)).  
 Концепт, патч Win 7, конфиги, службы, портативное развёртывание на Linux, [система обновлений](https://github.com/Chara-Freedom/GRU-current), гайд, exe код от Chara Freedom.  
