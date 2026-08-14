@@ -21,21 +21,19 @@ if [[ $? = 22 ]]; then
 read -n 1 -p "I need ipfs connectivity to update. Please check your Internet connection. "
 exit
 fi
-if [[ $(ls -d */ | wc -l) -gt 7 || $(find . -maxdepth 1 -type f | wc -l) -gt 10 ]]; then
-read -n 1 -p "There are too many files to update. You don't want to run the updater in a folder with your personal files. Press any key if you want to exit or 0 if you want to update anyway. " INP
-echo
- if [[ $INP != 0 ]]; then
- exit
- fi
+UPD=(VERSION*)
+if [ ! -f $UPD ]; then
+mkdir AntiTor
+cd AntiTor
 fi
-lsof -t "./tor/ld-linux-x86-64.so.2" | xargs -r kill
+lsof -t "./tor/ld-linux-x86-64.so.2" >/dev/null 2>&1 | xargs -r kill
 systemctl --user disable tor.service --now
-rm ~/.config/systemd/user/tor.service
-cp "./torrc.txt" "./data/torrc.txt"
+rm ~/.config/systemd/user/tor.service >/dev/null 2>&1
+cp "./torrc.txt" "./data/torrc.txt" >/dev/null 2>&1
 if [[ -f "./AUTO.no" ]]; then
 cp "./AUTO.no" "./data/AUTO.no"
 fi
-cp -r "./data" ~/data
+cp -r "./data" ~/data >/dev/null 2>&1
 if grep -q "The mode is custom" "./torrc.txt" >/dev/null 2>&1; then
 cp "./torrc.txt" "./change-mode/custom/torrc.txt"
 mkdir ~/change-mode
@@ -51,8 +49,8 @@ rm -rf *
 curl "https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/AntiTor_linux_current.zip" -O
 unzip "./AntiTor_linux_current.zip"
 rm "./AntiTor_linux_current.zip"
-cp -r ~/data "./"
-rm -r ~/data
+cp -r ~/data "./" >/dev/null 2>&1
+rm -r ~/data >/dev/null 2>&1
 if [[ -f "./data/AUTO.no" ]]; then
 cp "./data/AUTO.no" "./AUTO.no"
 rm "./data/AUTO.no"
@@ -66,7 +64,7 @@ fi
 if grep -q "#MiddleNodes" "./data/torrc.txt" >/dev/null 2>&1; then
 sed -i 's/MiddleNodes/#MiddleNodes/' "./torrc.txt"
 fi
-rm "./data/torrc.txt"
+rm "./data/torrc.txt" >/dev/null 2>&1
 if grep -q "The mode is custom" ~/change-mode/custom/torrc.txt >/dev/null 2>&1; then
 cp -r ~/change-mode/custom "./change-mode"
 rm -r ~/change-mode
