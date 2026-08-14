@@ -8,7 +8,7 @@ exit
 del "%temp%\test.txt"
 if "%CD:~-1%" == "\" (set "WAY=%CD:~0,-1%") else set "WAY=%CD%"
 for %%I in (VERSION*) do set "UPD=%%~nxI"
-if not exist "%WAY%\%UPD%" (
+if not exist "%UPD%" (
 md AntiTor
 cd AntiTor
 )
