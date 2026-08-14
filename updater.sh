@@ -26,7 +26,7 @@ if [ ! -f $UPD ]; then
 mkdir AntiTor
 cd AntiTor
 fi
-lsof -t "./tor/ld-linux-x86-64.so.2" 2>/dev/null | xargs -r kill >/dev/null 2>&1
+lsof -t "./tor/ld-linux-x86-64.so.2" 2>/dev/null | xargs -r kill
 systemctl --user disable tor.service --now
 rm ~/.config/systemd/user/tor.service >/dev/null 2>&1
 cp "./torrc.txt" "./data/torrc.txt" >/dev/null 2>&1
