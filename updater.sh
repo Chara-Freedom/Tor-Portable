@@ -23,8 +23,8 @@ exit
 fi
 UPD=(VERSION*)
 if [ ! -f $UPD ]; then
-mkdir AntiTor
-cd AntiTor
+mkdir "./AntiTor"
+cd "./AntiTor"
 fi
 lsof -t "./tor/ld-linux-x86-64.so.2" 2>/dev/null | xargs -r kill
 systemctl --user disable tor.service --now
