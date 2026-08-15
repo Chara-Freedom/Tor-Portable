@@ -13,7 +13,7 @@
 
 The fine-tuned Tor core for any browser configurations. EN, CN and RU configs. 2025 version Webtunnel proto. Linux, win 7 and win 8+ support.
 
-Support me: 0xb9569717b5f1ee67a2ace2b999a61e3d8d4cce52 USDT BEP20.
+Support me: 0xAE1B6c125383D1a5B83a2C906C22215e32E7184B USDT BEP20.
 
 **Please leave a star.**
 
