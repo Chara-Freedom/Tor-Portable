@@ -50,6 +50,10 @@ Tor Portable is hosted on the IPNS "eternal cloud", which is extremely convenien
 
 [Download the release from here](https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/).
 
+Via bash on Linux:
+
+`curl -sSL https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/updater.sh | bash`
+
 Select the Tor you need and unpack it. Avoid special characters in the paths to your folder. Running AntiTor will open Tor for current session, while running service-manager will create a service. Tor is launched via AntiTor.exe, instantly minimizing itself, which makes it compatible with startup (win+r shell:startup) and pinning the exe to the taskbar; autostart does exactly this. To remove the service or autostart, run them again. AntiTor and service-manager are the only two files that will run Tor correctly. Tor will start with all the necessary universal connection settings. Opening tor.exe in the tor folder will launch pure, bridgeless core Tor. It can take a significant amount of time to find its directory, but if successful, it might even work quite well.
 
 If you are running win 7 version, do not mix up the bitness. If you mixed up the bitness, open the reset-oldwin-patch file and download the version with a different bitness.
