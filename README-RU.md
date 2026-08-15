@@ -55,7 +55,7 @@ Tor Portable — это простое, полностью портативно�
 
 Скачать через bash на Linux:
 
-curl -sSL https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/updater.sh | bash
+`curl -sSL https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/updater.sh | bash`
 
 Если вам нужен максимально комфортный и развитый Tor на Андроид, здесь я позволю себе не изобретать велосипед. Скачайте последнюю версию замечательной программы [InviZible Pro](https://github.com/Gedsh/InviZible/releases/latest) от [Gedsh](https://github.com/Gedsh). В ней я бескомпромиссно уверен. Гайд по её использованию находится [здесь](https://github.com/Chara-Freedom/Tor-Portable/wiki/InviZible-Pro).
 
