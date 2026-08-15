@@ -20,7 +20,7 @@
 
 Поддержать нас:
 
-0xb9569717b5f1ee67a2ace2b999a61e3d8d4cce52 USDT BEP20 — Chara Freedom (портативный Тор)  
+0xAE1B6c125383D1a5B83a2C906C22215e32E7184B USDT BEP20, https://boosty.to/chara-freedom — Chara Freedom (портативный Тор)  
 **https://antizapret.prostovpn.org/donate.html — ValdikSS (прокси Антизапрет, ВАЖНО в ноябре и декабре каждого года)**
 
 **Пожалуйста, оставьте звезду.**
