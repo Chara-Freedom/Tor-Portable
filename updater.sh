@@ -16,7 +16,7 @@ if ! command -v curl >/dev/null 2>&1 || ! command -v unzip >/dev/null 2>&1 || ! 
 read -n 1 -p ""
 exit
 fi
-curl "https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/test.txt" -f -s -o /dev/null
+curl "https://eu.orbitor.dev/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/test.txt" -f -s -o /dev/null
 if [[ $? = 22 ]]; then
 read -n 1 -p "I need ipfs connectivity to update. Please check your Internet connection. "
 exit
@@ -46,7 +46,7 @@ if ! grep -q "The mode is custom" "./torrc.txt" >/dev/null 2>&1; then
  fi
 fi
 rm -rf *
-curl "https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/AntiTor_linux_current.zip" -O
+curl "https://eu.orbitor.dev/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/AntiTor_linux_current.zip" -O
 unzip "./AntiTor_linux_current.zip"
 rm "./AntiTor_linux_current.zip"
 cp -r ~/data "./" >/dev/null 2>&1
