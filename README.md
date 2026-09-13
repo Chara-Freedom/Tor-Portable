@@ -56,11 +56,11 @@ First of all, if you want an experience similar to Tor Portable on Android, ther
 
 Tor Portable is hosted on the IPNS "eternal cloud", which is extremely convenient for independent information distribution, since proprietary clouds are unreliable (for many reasons, and even GitHub has mistakenly removed Tor Portable several times, making it unavailable). For this, pinata.cloud and ipns.ipfs.network were used. I don't recommend anyone to use free proprietary clouds like MEGA with their censorship and lack of features, as dependence on them deprives you of technological sovereignty.
 
-[Download the release from here](https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/).
+[Download the release from here](https://eu.orbitor.dev/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/).
 
 Via bash on Linux:
 
-`curl -fsSL https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/updater.sh | bash`
+`curl -fsSL https://eu.orbitor.dev/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/updater.sh | bash`
 
 Select the Tor you need and unpack it. Avoid special characters in the paths to your folder. Running AntiTor will open Tor for current session, while running service-manager will create a service. Tor is launched via AntiTor.exe, instantly minimizing itself, which makes it compatible with startup (win+r shell:startup) and pinning the exe to the taskbar; autostart does exactly this. To remove the service or autostart, run them again. AntiTor and service-manager are the only two files that will run Tor correctly. Tor will start with all the necessary universal connection settings. Opening tor.exe in the tor folder will launch pure, bridgeless core Tor. It can take a significant amount of time to find its directory, but if successful, it might even work quite well.
 
@@ -77,9 +77,9 @@ If you use Chrome-like browser (except Brave), please also install [WebRTC Contr
 
 It's time to sync your settings. Choose between three configs:
 
-https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/ZeroOmegaOptions-CN.bak  
-https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/ZeroOmegaOptions-EN.bak  
-https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/ZeroOmegaOptions-RU.bak
+https://eu.orbitor.dev/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/ZeroOmegaOptions-CN.bak  
+https://eu.orbitor.dev/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/ZeroOmegaOptions-EN.bak  
+https://eu.orbitor.dev/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/ZeroOmegaOptions-RU.bak
 
 ![1](https://github.com/user-attachments/assets/ba35f792-2e3a-4113-94da-f26a3e9fad26)
 
