@@ -1,16 +1,16 @@
 1 VERSIONINFO
-FILEVERSION 2,7,8,0
+FILEVERSION 2,9,4,0
 BEGIN
   BLOCK "StringFileInfo"
   BEGIN
     BLOCK "040904E4"
     BEGIN
-      VALUE "CompanyName", "The Tor Project; Verity Freedom"
+      VALUE "CompanyName", "The Tor Project; Chara Freedom"
       VALUE "FileDescription", "For our and your freedom"
       VALUE "LegalCopyright", "BSD-3 and MPL-2.0 licenses"
       VALUE "OriginalFilename", "AntiTor.exe"
       VALUE "ProductName", "Tor Portable"
-      VALUE "ProductVersion", "GRU current; build 2.78"
+      VALUE "ProductVersion", "GRU current; build 2.94"
     END
   END
   BLOCK "VarFileInfo"

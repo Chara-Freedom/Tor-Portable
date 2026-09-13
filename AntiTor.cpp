@@ -21,7 +21,7 @@ UPD = buffer;
 }
 _pclose(pipe1);
 string link;
-if (UPD.find('V') != string::npos) link = "https://k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4.ipns.dweb.link/" + UPD;
+if (UPD.find('V') != string::npos) link = "https://eu.orbitor.dev/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/" + UPD;
 IStream* pStream = NULL;
 if (filesystem::exists (autocheck)) goto Skip;
 if (FAILED(URLOpenBlockingStream(0, link.c_str(), &pStream, 0, 0))) {
