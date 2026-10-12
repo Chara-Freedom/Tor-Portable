@@ -1,5 +1,5 @@
-I used https://github.com/niXman/mingw-builds-binaries/releases check it out!
+I used https://github.com/niXman/mingw-builds-binaries/releases posix-dwarf-msvcrt-rt_v14-rev1.7z check it out!
 
 windres icon.rc -O coff -o icon.res
 windres version.rc -O coff -o version.res
-g++ -o AntiTor AntiTor.cpp -O3 -static -lurlmon version.res icon.res
+g++ -o AntiTor AntiTor.cpp -static -lurlmon version.res icon.res
