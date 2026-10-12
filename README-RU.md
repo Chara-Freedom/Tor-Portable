@@ -38,7 +38,7 @@
 [Патчер Win 7](https://github.com/stunndard/golangwin7patch) от stunnard.  
 [Лист хостов](https://github.com/dartraiden/no-russia-hosts) от dartraiden.  
 Автор [прокси Антизапрет](http://antizapret.prostovpn.org/) — ValdikSS.  
-[Tor Expert Bundle](https://www.torproject.org/download/tor/) от Tor Project.  
+[Tor Expert Bundle](https://www.torproject.org/download/tor/) от Tor Project. Код ядра: [1](https://gitlab.torproject.org/tpo/core/tor), [2](https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/lyrebird).  
 [SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega) от FelisCatus, [ZeroOmega](https://github.com/zero-peak/ZeroOmega) от zero-top.  
 [Discord-drover](https://github.com/hdrover/discord-drover) от hdrover, [discord-linux-bypass](https://github.com/nik9play/discord-linux-bypass) от nik9play.  
 [Техническая помощь](https://github.com/Chara-Freedom/Tor-Portable/commits?author=NoPlagiarism) от NoPlagiarism, также помог проименовать Тор мосты (приватный замороженный проект) и тестировать Webtunnel.  
